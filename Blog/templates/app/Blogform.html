@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Blog
+{% endblock %}
+{% block content %}
+<h1 class="text-center text-white mt-4" >Welcome to front page of Bloging Website</h1>
+
+<h2>
+{% if form.instance.pk %}
+Edit Blog
+{% else %}
+Create Blog
+{% endif %}
+
+<form method="post" enctype="multipart/form-data" class="form">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+</form>
+<a href="{% url 'Blog_list'%}">Back to Blog_list</a>
+</h2>
+
+{% endblock %}
+

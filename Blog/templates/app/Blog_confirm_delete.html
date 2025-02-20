@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Blog
+{% endblock %}
+{% block content %}
+<h1 class="text-center text-white mt-4">Do you really want to delete this Blog</h1>
+
+<form method="post">
+    {% csrf_token %}
+        <button class="btn btn-danger" type="submit">Delete</button>
+        <a href="{% url 'Blog_list' %}" class="btn btn-light">Cancel</a>
+</form>
+
+{% endblock %}  
