@@ -23,14 +23,15 @@ A full-featured Blogging Website built with **Django**. This web application all
 - **Database**: SQLite (default) or any Django-supported DB
 - **Authentication**: Django's built-in auth system
 
+---
+
  ## Prerequisites
 
 - Python 3.x
 - pip
 - Virtualenv (optional but recommended)
 
-
-
+---
 
 ## 🚀 Run migrations:
 python manage.py migrate
